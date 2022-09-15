@@ -1,6 +1,6 @@
 require('lualine').setup {
   options = {
-    theme = 'auto'
+    theme = 'molokai'
   },
-  extensions = { 'nvim-tree', 'fugitive' }
+  extensions = { 'nvim-tree', 'fugitive' },
 }

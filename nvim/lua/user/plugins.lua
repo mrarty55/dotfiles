@@ -3,11 +3,14 @@ require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- Theme
-  use 'shaunsingh/nord.nvim'
   use 'sainnhe/gruvbox-material'
+  use 'sainnhe/sonokai'
+  use 'folke/tokyonight.nvim'
 
   -- Language server
   use 'neovim/nvim-lspconfig'
+
+  -- Auto completion
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -17,14 +20,23 @@ require('packer').startup(function()
   use 'saadparwaiz1/cmp_luasnip'
   use 'tami5/lspsaga.nvim'
 
+  -- Auto pairing
+  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-ts-autotag'
+  use 'p00f/nvim-ts-rainbow'
+
   -- Syntax highlighting
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
-  -- Language support
-  use 'pangloss/vim-javascript'
-  use 'posva/vim-vue'
-  -- use 'ray-x/go.nvim'
+  -- Language support tools
+  use 'ray-x/go.nvim'
   use 'dart-lang/dart-vim-plugin'
+  use 'akinsho/flutter-tools.nvim'
+
+  -- Debugger
+  use 'mfussenegger/nvim-dap'
+  use 'rcarriga/nvim-dap-ui'
+  use 'theHamsta/nvim-dap-virtual-text'
 
   -- File explorer & fuzzy finder
   use 'kyazdani42/nvim-tree.lua'

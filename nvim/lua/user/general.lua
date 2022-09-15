@@ -1,9 +1,8 @@
 -- General Config
-
-local map_opts = { noremap = true, silent = true }
+local map_opts = require('user.settings.mapping')
 
 vim.cmd([[
-  colorscheme nord
+  colorscheme sonokai 
   syntax on
   filetype plugin indent on
 ]])
@@ -35,4 +34,5 @@ vim.opt.signcolumn = 'yes'
 
 vim.api.nvim_set_keymap('n', '<space>h', '<cmd>bp <CR>', map_opts)
 vim.api.nvim_set_keymap('n', '<space>l', '<cmd>bn <CR>', map_opts)
-vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>NvimTreeToggle <CR>', map_opts)
+vim.api.nvim_set_keymap('n', '<space>w', '<cmd>bd <CR>', map_opts)
+vim.api.nvim_set_keymap('n', '<leader>wq', '<cmd>wq <CR>', map_opts)

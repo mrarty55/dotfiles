@@ -1,6 +1,8 @@
+local map_opts = require('user.settings.mapping')
+
 require('nvim-tree').setup {
   view = {
-    side = 'right',
+    side = 'left',
     number = true,
     relativenumber = true,
   },
@@ -10,9 +12,11 @@ require('nvim-tree').setup {
     }
   },
   filters = {
-    exclude = {
-      ".git",
-      "node_modules"
+    custom = {
+      "^.git$",
+      "^node_modules$"
     }
   }
 }
+
+vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>NvimTreeToggle <CR>', map_opts)
