@@ -11,15 +11,19 @@ local servers = {
   'tsserver',
   'html',
   'cssls',
+  'cssmodules_ls',
   'volar',
   'svelte',
+  'astro',
   'tailwindcss',
+  'clangd',
   'gopls',
   'rust_analyzer',
   'pyright',
-  'sumneko_lua',
+  'lua_ls',
   'jsonls',
-  'yamlls'
+  'yamlls',
+  'dockerls'
 }
 
 -- Setup each language servers
@@ -39,7 +43,7 @@ for _, lsp in pairs(servers) do
   end
 
   -- Lua LSP
-  if (lsp == 'sumneko_lua') then
+  if (lsp == 'lua_ls') then
     local runtime_path = vim.split(package.path, ';')
     table.insert(runtime_path, "lua/?.lua")
     table.insert(runtime_path, "lua/?/init.lua")
@@ -65,3 +69,24 @@ for _, lsp in pairs(servers) do
 
   lspconfig[lsp].setup(server_opts)
 end
+
+require('flutter-tools').setup {
+  decorations = {
+    device = true,
+  },
+  debugger = {
+    enabled = true,
+    run_via_dap = true,
+  },
+  widget_guides = {
+    enabled = true,
+  },
+  lsp = {
+    color = {
+      enabled = true,
+      background = true,
+    },
+    on_attach = lsp_opts.on_attach,
+    capabilities = lsp_opts.capabilities,
+  }
+}

@@ -2,7 +2,7 @@
 local map_opts = require('user.settings.mapping')
 
 vim.cmd([[
-  colorscheme sonokai 
+  colorscheme base16-espresso
   syntax on
   filetype plugin indent on
 ]])
@@ -36,3 +36,4 @@ vim.api.nvim_set_keymap('n', '<space>h', '<cmd>bp <CR>', map_opts)
 vim.api.nvim_set_keymap('n', '<space>l', '<cmd>bn <CR>', map_opts)
 vim.api.nvim_set_keymap('n', '<space>w', '<cmd>bd <CR>', map_opts)
 vim.api.nvim_set_keymap('n', '<leader>wq', '<cmd>wq <CR>', map_opts)
+vim.api.nvim_set_keymap('n', '<leader>q', '<cmd>q <CR>', map_opts)

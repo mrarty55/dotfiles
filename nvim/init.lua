@@ -4,10 +4,8 @@ require('user.plugins')
 require('user.general')
 -- Load language server config
 require('user.nvim-lspconfig')
--- Load go.nvim config
-require('user.go')
--- Load flutter-tools.nvim config
-require('user.flutter-tools')
+-- Load debugger config
+require('user.nvim-dap')
 -- Load auto completion config
 require('user.nvim-cmp')
 -- Load autopairs config
@@ -16,13 +14,15 @@ require('user.nvim-autopairs')
 require('user.nvim-treesitter')
 -- Load telescope config
 require('user.telescope')
+-- Load nvim-tree config
+require('user.nvim-tree')
 -- Load lualine config
 require('user.lualine')
 -- Load bufferline config
 require('user.bufferline')
--- Load nvim-tree config
-require('user.nvim-tree')
 -- Load gitsign config
 require('user.gitsigns')
 -- Load tmux-nvim-navigation config
 require('user.tmux-nvim')
+-- Load Comment.nvim config
+require('user.nvim-comment')

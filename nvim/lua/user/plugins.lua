@@ -3,9 +3,7 @@ require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- Theme
-  use 'sainnhe/gruvbox-material'
-  use 'sainnhe/sonokai'
-  use 'folke/tokyonight.nvim'
+  use 'RRethy/nvim-base16'
 
   -- Language server
   use 'neovim/nvim-lspconfig'
@@ -29,8 +27,6 @@ require('packer').startup(function()
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   -- Language support tools
-  use 'ray-x/go.nvim'
-  use 'dart-lang/dart-vim-plugin'
   use 'akinsho/flutter-tools.nvim'
 
   -- Debugger
@@ -39,11 +35,14 @@ require('packer').startup(function()
   use 'theHamsta/nvim-dap-virtual-text'
 
   -- File explorer & fuzzy finder
-  use 'kyazdani42/nvim-tree.lua'
+  use 'nvim-tree/nvim-tree.lua'
   use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/telescope-file-browser.nvim'
+  use 'nvim-telescope/telescope-media-files.nvim'
+  use 'nvim-telescope/telescope-dap.nvim'
 
   -- Comment
-  use 'tomtom/tcomment_vim'
+  use 'numToStr/Comment.nvim'
 
   -- Status line and buffer tabs
   use 'nvim-lualine/lualine.nvim'
